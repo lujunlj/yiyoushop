@@ -1,0 +1,28 @@
+2019-10-07 22:02:00,790 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:02:00,794 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 192.168.5.1:8100_true,
+
+2019-10-07 22:03:58,884 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:03:58,885 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 
+
+2019-10-07 22:04:29,483 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:04:29,483 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 192.168.5.1:8100_true,
+
+2019-10-07 22:04:29,486 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 192.168.5.1:8100_true,
+
+2019-10-07 22:20:06,104 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:20:06,105 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 
+
+2019-10-07 22:21:12,059 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:21:12,059 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 192.168.5.1:8100_true,
+
+2019-10-07 22:21:12,063 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 192.168.5.1:8100_true,
+
+2019-10-07 22:26:14,034 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.5.1:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-07 22:26:14,034 INFO [IP-UPDATED] namespace: 400a60cc-162a-4a17-a907-08b9460e3556, service: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server, ips: 
+

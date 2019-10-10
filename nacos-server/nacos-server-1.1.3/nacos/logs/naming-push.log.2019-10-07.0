@@ -1,0 +1,36 @@
+2019-10-07 22:02:01,795 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:03:59,886 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:04:30,484 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:20:07,106 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:20:07,106 INFO serviceName: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server changed, schedule push for: 192.168.145.1:55415, agent: Nacos-Java-Client:v1.1.1, key: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:20:07,106 INFO send udp packet: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:20:17,111 INFO retry to push data, key: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:20:17,111 INFO send udp packet: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:20:27,113 INFO retry to push data, key: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:20:27,113 WARN max re-push times reached, retry times 2, key: 192.168.145.1,55415,2697346660601443
+
+2019-10-07 22:21:13,060 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:26:15,036 INFO DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server is changed, add it to push queue.
+
+2019-10-07 22:26:15,036 INFO serviceName: DEFAULT_GROUP@@spring-cloud-alibaba-dubbo-server changed, schedule push for: 192.168.145.1:49383, agent: Nacos-Java-Client:v1.1.1, key: 192.168.145.1,49383,2697714590005427
+
+2019-10-07 22:26:15,036 INFO send udp packet: 192.168.145.1,49383,2697714590005427
+
+2019-10-07 22:26:25,043 INFO retry to push data, key: 192.168.145.1,49383,2697714590005427
+
+2019-10-07 22:26:25,043 INFO send udp packet: 192.168.145.1,49383,2697714590005427
+
+2019-10-07 22:26:35,212 INFO retry to push data, key: 192.168.145.1,49383,2697714590005427
+
+2019-10-07 22:26:35,212 WARN max re-push times reached, retry times 2, key: 192.168.145.1,49383,2697714590005427
+

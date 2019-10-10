@@ -1,0 +1,62 @@
+server:
+  port: 8100
+username: lujun3333333333333333
+dubbo:
+   #scan:
+    # dubbo 服务扫描基准包 也可以 启动类配置 @DubboComponentScan
+     #base-packages: com.alibaba.cloud.dubbo.bootstrap
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1 
+  registry: 
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost 
+spring:    
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+####swagger相关配置
+swagger:
+  base-package: com.yezi.weixin.service
+  title: SpringCloud2.x构建微服务电商项目-微信服务接口
+  version: 1.1
+  terms-of-service-url: www.yezi.com
+  contact:
+      name: 叶子网络-陆军
+      email: 434998516@qq.com
+wx:
+  mp:
+    configs:
+      - appId: wx3354741262e0501e #（一个公众号的appid）
+        secret: d22b753def7a164d21c97bbf6ea7a13c #（公众号的appsecret）
+        token: lujun #（接口配置里的Token值）
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+yiyou:
+  weixin:
+    registration:
+      code:
+        ###微信注册码消息
+        message:  您的注册码为:%s，请关注南京叶子易优网络科技,我们致力于面向广大消费者的精品服务提供，期待你的光临，感谢！
+    default:
+      registration:
+        code:
+          message: 您的消息，我们已经收到,会及时回复给您的!

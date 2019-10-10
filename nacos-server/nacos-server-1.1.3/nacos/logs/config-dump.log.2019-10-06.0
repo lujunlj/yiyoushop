@@ -1,0 +1,10 @@
+2019-10-06 15:00:39,059 INFO [dump-all-ok] nacos-consumer-dev.yaml+yezi, 1568364099000, length=599, md5=dfe17f07164a7db8036d0892c66e597b
+
+2019-10-06 15:00:39,167 INFO [dump-all-ok] nacos-provider-dev.yaml+yezi, 1568798344000, length=788, md5=ff3c25617fcac9c0d913c02dc04200ba
+
+2019-10-06 15:00:39,168 INFO [dump-all-ok] gateway-dev.yaml+yezi, 1567388086000, length=925, md5=af863b545a73319e9c72a31920d1bef4
+
+2019-10-06 15:00:39,169 INFO [dump-all-ok] weixin-service-dev.yaml+yezi, 1569635446000, length=1480, md5=bdd7d30b45b5aaf1c10d992a42f302ee
+
+2019-10-06 15:00:39,178 INFO [dump-all-ok] member-service-dev.yaml+yezi, 1569159384000, length=599, md5=dfe17f07164a7db8036d0892c66e597b
+

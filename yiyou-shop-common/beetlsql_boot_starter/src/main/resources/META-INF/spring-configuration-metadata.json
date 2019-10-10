@@ -1,0 +1,114 @@
+{
+  "groups": [
+    {
+      "name": "beetl"
+    },
+    {
+      "name": "beetlsql"
+    },
+    {
+      "name": "beetlsql.ds",// 多数据源暂时不知道怎么做，可能要springspel有这种动态支持才行
+	  "description": "BeetlSQL 多数据源配置前缀，其中每个数据源单独配置与单一数据源一致（别忘了加数据源名字）"
+    }
+  ],
+  "properties": [
+    {
+      "name": "beetl.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用Beetl"
+    },
+    {
+      "name": "beetl.templatesPath",
+      "type": "java.lang.String",
+      "description": "Beetl 模板路径",
+	  "defaultValue": "templates"
+    },
+	{
+	  "name": "beetl.suffix",
+	  "type": "java.lang.String",
+	  "description": "Beetl 模板后缀",
+	  "defaultValue": "btl"
+	},
+	
+    {
+      "name": "beetlsql.sqlPath",
+      "type": "java.lang.String",
+      "description": "BeetlSQL 存放SQL的markdown文件路径",
+      "defaultValue": "/sql"
+    },
+    {
+      "name": "beetlsql.logicDeleteValue",
+      "type": "java.lang.Integer",
+      "description": "逻辑删除标志位",
+      "defaultValue": 1
+    },
+    {
+      "name": "beetlsql.basePackage",
+      "type": "java.lang.String",
+      "description": "单一数据源的SQLManager对应的Mapper所在包",
+      "defaultValue": "com"
+    },
+    {
+      "name": "beetlsql.nameConversion",
+      "type": "java.lang.String",
+      "description": "默认数据表字段名与实体字段名称的名称转换器",
+      "defaultValue": "org.beetl.sql.core.UnderlinedNameConversion"
+    },
+    {
+      "name": "beetlsql.dbStyle",
+      "type": "java.lang.String",
+      "description": "数据库SQL语句风格",
+      "defaultValue": "org.beetl.sql.core.db.MySqlStyle"
+    },
+    {
+      "name": "beetlsql.daoSuffix",
+      "type": "java.lang.String",
+      "description": "DAO持久类的后缀",
+      "defaultValue": "Dao"
+    },
+    {
+      "name": "beetlsql.mutiple.datasource",
+      "type": "java.lang.String[]",
+      "description": "多数据源配置，数据源名称以逗号分隔"
+    },
+	
+    {
+      "name": "beetl-beetlsql.dev",
+      "type": "java.lang.Boolean",
+      "description": "是否实时检查Beetl模板或者BeetlSQL的md文件的改动，以及是否开启BeetlSQL的debug输出SQL",
+      "defaultValue": true
+    }
+  ],
+  "hints": [ // 对每个配置项中的每个值详细说明，用providers提供
+	{
+	  "name": "beetl-beetlsql.dev",
+	  "providers": [
+		{
+		  "name": "beetl-beetlsql.dev"
+		}
+	  ]
+	},
+	{
+	  "name": "beetlsql.nameConversion",
+	  "providers": [
+		{
+		  "name": "class-reference",
+		  "parameters": {
+			"target": "org.beetl.sql.core.NameConversion"
+		  }
+		}
+	  ]
+	},
+	{
+	  "name": "beetlsql.dbStyle",
+	  "providers": [
+		{
+		  "name": "class-reference",
+		  "parameters": {
+			"target": "org.beetl.sql.core.db.AbstractDBStyle"
+		  }
+		}
+	  ]
+	}
+  ]
+}

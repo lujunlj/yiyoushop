@@ -1,0 +1,63 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    # Dubbo 应用名称
+    name: spring-cloud-alibaba-dubbo-client
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        group: yezi
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+        file-extension: yaml
+        prefix: member-service
+      discovery:
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  messages:
+      encoding: UTF-8
+  datasource:
+      url: jdbc:mysql://118.25.142.8:2280/yiyou_member?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      username: root
+      password: Chinavnet.1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      hikari:
+        minimum-idle: 5
+        ## 连接池最大连接数，默认是10
+        maximum-pool-size: 15
+        ## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+        auto-commit: true
+        ## 空闲连接存活最大时间，默认600000（10分钟）
+        idle-timeout: 30000
+        pool-name: DatebookHikariCP
+        ## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        connection-test-query: select 1
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml #MyBatis Mapper 所对应的 XML 文件位置
+  #mybatis默认typeAliasesPackage是不支持正则扫描package的，
+  #因此需要手动继承自己实现正则扫描，方法和传统的spring+mybatis没什么区别唯一不同的是一个需要继承类一个是使用的扫描实现。
+  type-aliases-package: com.yezi.**.entity #MyBaits 别名包扫描路径
+  #typeEnumsPackage: com.baomidou.springboot.entity.enums
+  configuration: #大都为 MyBatis 原生支持的配置
+    cache-enabled: false #全局地开启或关闭配置文件中的所有映射器已经配置的任何缓存，默认为 true。
+    map-underscore-to-camel-case: true #是否开启自动驼峰命名规则
+    jdbc-type-for-null: null #配置JdbcTypeForNull, oracle数据库必须配置
+  global-config:
+    db-config:
+      capital-mode: true #是否开启大写命名，开启后生成SQL语句都为大写；默认不开启。
+      field-strategy: NOT_NULL #该策略约定了如何产出注入的sql, IGNORED：所有字段都更新和插入、 NOT_NULL：只更新和插入非NULL值、 NOT_EMPTY：只更新和插入非NULL值且非空字符串
+      id-type: UUID #主键类型 AUTO(0)MP自动决定 、NONE(1)：生成语句插入null，需要数据库自增时可以使用、INPUT(2)：根据用户输入值、ID_WORKER(3)：全局唯一ID (数字类型唯一ID)、
+      #效果: 使用mp自带方法删除和查找都会附带逻辑删除功能 (自己写的xml不会)
+      #若确需查找删除数据，如老板需要查看历史所有数据的统计汇总信息，请单独手写sql。
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yiyou-shop-parent</artifactId>
+        <groupId>com.yezi</groupId>
+        <version>1.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>yiyou-shop-service-api</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yiyou-shop-service-api-weixin</module>
+        <module>yiyou-shop-service-api-member</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.yezi</groupId>
+            <artifactId>yiyou-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <!-- SpringBoot-整合Web组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+    <!--注意限定版本一定为RELEASE,因为上传的对应仓库的存储类型为RELEASE -->
+    <!--指定仓库地址 -->
+    <distributionManagement>
+        <repository>
+            <!--此名称要和.m2/settings.xml中设置的ID一致 -->
+            <id>yezi</id>
+            <url>http://192.168.11.186:8081/repository/yezi--release/</url>
+        </repository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <!--发布代码Jar插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!--发布源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

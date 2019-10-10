@@ -1,0 +1,16 @@
+spring:
+  application:
+    # Dubbo 应用名称
+    name: spring-cloud-alibaba-dubbo-server
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        group: yezi
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+        file-extension: yaml
+        prefix: weixin-service
+      discovery:
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+  profiles:
+    active: dev

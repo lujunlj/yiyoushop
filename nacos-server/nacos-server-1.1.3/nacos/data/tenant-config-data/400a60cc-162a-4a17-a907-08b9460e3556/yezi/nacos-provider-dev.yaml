@@ -1,0 +1,33 @@
+server:
+  port: 8100
+username: lujun3333333333333333
+dubbo:
+   #scan:
+    # dubbo 服务扫描基准包 也可以 启动类配置 @DubboComponentScan
+     #base-packages: com.alibaba.cloud.dubbo.bootstrap
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost 
+spring:    
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+####swagger相关配置
+swagger:
+  base-package: com.yezi.weixin.service
+  title: SpringCloud2.x构建微服务电商项目-微信服务接口
+  version: 1.1
+  terms-of-service-url: www.yezi.com
+  contact:
+      name: 叶子网络-陆军
+      email: 434998516@qq.com

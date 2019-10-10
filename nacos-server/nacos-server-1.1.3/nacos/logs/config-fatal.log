@@ -1,0 +1,24 @@
+2019-10-10 09:52:34,605 ERROR [master-db] master db not found.
+
+2019-10-10 09:52:34,619 ERROR [db-error] master db  down.
+
+2019-10-10 09:52:34,822 WARN isQuickStart:false
+
+2019-10-10 09:52:34,905 ERROR Nacos Server did not start because dumpservice bean construction failure :
+No DataSource set
+
+2019-10-10 09:54:50,675 ERROR [master-db] master db not found.
+
+2019-10-10 09:54:50,685 ERROR [db-error] master db  down.
+
+2019-10-10 09:54:50,793 WARN isQuickStart:false
+
+2019-10-10 09:54:50,827 ERROR Nacos Server did not start because dumpservice bean construction failure :
+No DataSource set
+
+2019-10-10 09:55:28,338 WARN [master-db] jdbc:mysql://localhost:3306/nacos_config?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+
+2019-10-10 09:55:28,484 WARN isQuickStart:false
+
+2019-10-10 09:55:29,493 WARN useAddressServer:true
+

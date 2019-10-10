@@ -1,0 +1,41 @@
+server:
+    port: 8300
+spring:    
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      # Nacos 服务发现与注册配置
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: member
+        uri: lb://spring-cloud-alibaba-dubbo-client
+        predicates:
+        - Path=/member/**
+        filters:
+        - StripPrefix=1
+#       - JwtCheck=true
+      - id: weixin
+        uri: lb://spring-cloud-alibaba-dubbo-server
+        predicates:
+        - Path=/weixin/**
+        filters:
+        - StripPrefix=1
+#       - JwtCheck=true
+swagger:
+  base-package: com.yezi
+  title: 叶子易购
+  version: 1.0.0
+  description: 叶子网络出品家政服务后台1.0.0版本
+  contact:
+    name: 陆军
+    email: 434998516@qq.com
+    url: https://github.com/lujunlj/
+  docket:
+    basePackage: com.yezi

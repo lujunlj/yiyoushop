@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    # Dubbo 应用名称
+    name: spring-cloud-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        group: yezi
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+        file-extension: yaml
+        prefix: gateway
+      discovery:
+        namespace: 400a60cc-162a-4a17-a907-08b9460e3556
+swagger:
+  exclude-path:
